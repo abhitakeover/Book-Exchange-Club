@@ -3,7 +3,6 @@
 CREATE DATABASE IF NOT EXISTS book_exchange_club;
 USE book_exchange_club;
 
--- Table for members
 CREATE TABLE members (
     member_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
@@ -11,7 +10,6 @@ CREATE TABLE members (
     join_date DATE NOT NULL
 );
 
--- Table for books
 CREATE TABLE books (
     book_id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(200) NOT NULL,
@@ -20,7 +18,6 @@ CREATE TABLE books (
     available BOOLEAN DEFAULT TRUE
 );
 
--- Table for loans
 CREATE TABLE loans (
     loan_id INT PRIMARY KEY AUTO_INCREMENT,
     book_id INT NOT NULL,
